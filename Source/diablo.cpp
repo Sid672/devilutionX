@@ -1491,18 +1491,6 @@ void InitKeymapActions()
 #endif
 }
 
-void LoadGameFonts()
-{
-	LoadFont(GameFont12, ColorWhite);
-	LoadFont(GameFont12, ColorWhitegold);
-	LoadFont(GameFont12, ColorRed);
-	LoadFont(GameFont12, ColorBlue);
-	LoadFont(GameFont12, ColorBlack);
-	LoadFont(GameFont30, ColorGold);
-	LoadFont(GameFont46, ColorGold);
-	LoadFont(GameFont46, ColorBlack);
-}
-
 } // namespace
 
 void FreeGameMem()
@@ -1536,7 +1524,6 @@ bool StartGame(bool bNewGame, bool bSinglePlayer)
 		// Save 2.8 MiB of RAM by freeing all main menu resources
 		// before starting the game.
 		UiDestroy();
-		LoadGameFonts();
 
 		gbSelectProvider = false;
 

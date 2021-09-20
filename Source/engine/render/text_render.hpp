@@ -46,8 +46,7 @@ enum text_color : uint8_t {
 
 extern std::optional<CelSprite> pSPentSpn2Cels;
 
-void LoadFont(GameFontTables size, text_color color);
-void UnloadFont(GameFontTables size, text_color color);
+void UnloadFonts(GameFontTables size, text_color color);
 
 /**
  * @brief Calculate pixel width of first line of text, respecting kerning
